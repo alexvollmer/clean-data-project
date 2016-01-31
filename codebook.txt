@@ -1,0 +1,26 @@
+###############################################################################
+#                                 C O D E B O O K                             #
+###############################################################################
+
+The summarized data returned from the "summarize_health_data" function is
+a data.frame of 66 total variables.
+
+The first two variables (activity_name, first_name) describe the subjects and
+activities. The remaining 64 variables describe a variety of features
+recorded for each subject/activity combination. Each feature describes
+a specific intersection of dimensions and is encoded in the form of:
+
+    [domain].[feature].[summary](.[axis])
+
+The 'domain' segment is always either "time" or "frequency".
+
+The 'feature' segment describes the particular measurement taken from the
+device.
+
+The 'summary' segment describes the summary measurement. In the summarized
+data set this should only include the values "std" (for standard deviation)
+and "mean" (for arithmetic mean).
+
+The final 'axis' segment describes which spatial axis (X, Y or Z) the
+variable describes. Note that some measurements (e.g. "time.BodyAccMag")
+do not have an applicable 'axis' segment.
